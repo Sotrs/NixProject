@@ -13,14 +13,20 @@ Now in order to turn on the tubes we need a driver that can take the digital out
 1. The clock we want to create will be a Six-Digit clock "HH:MM:SS" meaning we need 60 individual outputs. Unfortunately the Atmega328P can maxes out at '18', including the analog outputs as digital I/O's.
 2. The tubes require a whopping 170V DC in order to light up and about 145V DC to keep running. That is not something we can control using only the digital outputs of a 5V DC Microcontroller.
 
-To solve the first problem we can simply use dedicated Drivers, in fact a BCD-TO-DECIMAL Decoder was made specifically for driving Nixie Tubes known as the SN74141 or its Soviet Sibling the K155ID1. This automatically solves the second problem as well as these drivers were created to handle the high voltage. The use of such drivers makes our project very simple as we can use 1 driver for each tube which brings us down from 60 individual outputs to 24 with each driver requiring 4 bits of info to control the 10 digits.
+To solve the first problem we can simply use dedicated Drivers, in fact a BCD-TO-DECIMAL Decoder was made specifically for driving Nixie Tubes known as the **SN74141** or its Soviet Sibling the K155ID1. This automatically solves the second problem as well as these drivers were created to handle the high voltage. The use of such drivers makes our project very simple as we can use 1 driver for each tube which brings us down from 60 individual outputs to 24 with each driver requiring 4 bits of info to control the 10 digits.
 
 ![Image](https://github.com/user-attachments/assets/0e374f84-9c49-43f8-99c9-a4b5e42608e6)
 
-However, the problem is yet to be solved as 24 outputs are still more than what our MCU can give, we can tackle this problem using an I/O Expander with a Serial Interface. Utilizing THE I^2C Interface of the ATmega we can use I/O Expanders such as the MCP23017 that will give us 16 extra I/O which are now more than enough of what we need. With that we can sucessfuly drive our nixie tubes using the MCU's Outputs!
+However, the problem is yet to be solved as 24 outputs are still more than what our MCU can give, we can tackle this problem using an I/O Expander with a Serial Interface. Utilizing THE I^2C Interface of the ATmega we can use I/O Expanders such as the **MCP23017** that will give us 16 extra I/O which are now more than enough of what we need. With that we can sucessfuly drive our nixie tubes using the MCU's Outputs!
 
 ![Image](https://github.com/user-attachments/assets/dae679db-f14d-4664-b422-6676676a34d9)
 
-We are still missing two critical components in our clock, while the ATmega328P can use its Internal 8MHz crystal Oscillator or an external 16MHz one they are still not very good at time keeping as this is not their intended use, also it will be unable to keep time while it is not powered. This is why we will use an RTC which is a device made for timekeeping. My choice of RTC is the DS3231 with a simple I2C connection and a cr2032 battery it can keep time with an insane 2PPM accuracy.
+We are still missing two critical components in our clock, while the ATmega328P can use its Internal 8MHz crystal Oscillator or an external 16MHz one they are still not very good at time keeping as this is not their intended use, also it will be unable to keep time while it is not powered. This is why we will use an RTC which is a device made for timekeeping. My choice of RTC is the **DS3231** with a simple I2C connection and a cr2032 battery it can keep time with an insane 2PPM accuracy.
 
 ![Image](https://github.com/user-attachments/assets/db0c53a4-4e39-4d6d-9993-70a54b9f5379)
+
+Last but definetely not least we will need a DC-DC boost converter, the clock will be powered by 5V DC so we will need to take that 5V and Convert it to 170V DC for our tubes. An easy solution to this is to use a premade module made by OMNIXIE called the **NCH8200HV**. It is small, efficient and widely used by many nixie clock creators, it simply does its job. It is the only premade module used in this project, dont't worry it will be embedded in our PCB very neatly and discreetly along with the other components.
+
+![Image](https://github.com/user-attachments/assets/10daaea3-362f-419d-b5e2-67e0215e916c)
+
+
