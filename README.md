@@ -7,9 +7,11 @@ By looking at the Nixie Datasheet we know that each tube requires 10 different I
 My MCU of choice is the ATmega328P which is a very popular choice that is also used in Arduino devices, it has a very well established documentation and support and can also be programmed using the Arduino IDE. This is exactly what I need as the Arduino IDE by itself is simple and easy to use and is also very well documented and supported by its community.
 
 ![Image](https://github.com/user-attachments/assets/a7d07339-eba1-4aa9-b806-48e4f633bd9e)
+![Image](https://github.com/user-attachments/assets/38cf3939-0b51-454c-ae6d-2f647e09a22b)
 
 Now in order to turn on the tubes we need a driver that can take the digital output of the ATmega and turn on the particular digit we want to light up. We have a few problems we must solve in order to achieve that:
 1. The clock we want to create will be a Six-Digit clock "HH:MM:SS" meaning we need 60 individual outputs. Unfortunately the Atmega328P can maxes out at '18', including the analog outputs as digital I/O's.
 2. The tubes require a whopping 170V DC in order to light up and about 145V DC to keep running. That is not something we can control using only the digital outputs of a 5V DC Microcontroller.
 
-To solve the first problem we can simply use dedicated Drivers 
+To solve the first problem we can simply use dedicated Drivers, in fact a BCD-TO-DECIMAL Decoder was made specifically for driving Nixie Tubes that could easily handle the high Voltage known as the SN74141 or its Soviet Sibling the K155ID1. This automatically solves the second problem as well.
+![Image](https://github.com/user-attachments/assets/0e374f84-9c49-43f8-99c9-a4b5e42608e6)
