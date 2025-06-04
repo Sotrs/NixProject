@@ -25,7 +25,7 @@ We are still missing two critical components in our clock, while the ATmega328P 
 
 ![Image](https://github.com/user-attachments/assets/db0c53a4-4e39-4d6d-9993-70a54b9f5379)
 
-Last but definetely not least we will need a DC-DC boost converter, the clock will be powered by 5V DC so we will need to take that 5V and Convert it to 170V DC for our tubes. An easy solution to this is to use a premade module made by OMNIXIE called the **NCH8200HV**. It is small, efficient and widely used by many nixie clock creators, it simply does its job. It is the only premade module used in this project, dont't worry it will be embedded in our PCB very neatly and discreetly along with the other components.
+Last but definetely not least we will need a DC-DC boost converter, the clock will be powered by 5V DC so we will need to take that 5V and convert it to 170V DC for our tubes. An easy solution to this is to use a premade module made by OMNIXIE called the **NCH8200HV**. It is small, efficient and widely used by many nixie clock creators, it simply does its job. It is the only premade module used in this project, dont't worry it will be embedded in our PCB very neatly and discreetly along with the other components.
 
 ![Image](https://github.com/user-attachments/assets/10daaea3-362f-419d-b5e2-67e0215e916c)
 
