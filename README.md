@@ -13,5 +13,6 @@ Now in order to turn on the tubes we need a driver that can take the digital out
 1. The clock we want to create will be a Six-Digit clock "HH:MM:SS" meaning we need 60 individual outputs. Unfortunately the Atmega328P can maxes out at '18', including the analog outputs as digital I/O's.
 2. The tubes require a whopping 170V DC in order to light up and about 145V DC to keep running. That is not something we can control using only the digital outputs of a 5V DC Microcontroller.
 
-To solve the first problem we can simply use dedicated Drivers, in fact a BCD-TO-DECIMAL Decoder was made specifically for driving Nixie Tubes that could easily handle the high Voltage known as the SN74141 or its Soviet Sibling the K155ID1. This automatically solves the second problem as well.
+To solve the first problem we can simply use dedicated Drivers, in fact a BCD-TO-DECIMAL Decoder was made specifically for driving Nixie Tubes known as the SN74141 or its Soviet Sibling the K155ID1. This automatically solves the second problem as well as these drivers were created to handle the high voltage.
+
 ![Image](https://github.com/user-attachments/assets/0e374f84-9c49-43f8-99c9-a4b5e42608e6)
