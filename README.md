@@ -22,3 +22,5 @@ However, the problem is yet to be solved as 24 outputs are still more than what 
 ![Image](https://github.com/user-attachments/assets/dae679db-f14d-4664-b422-6676676a34d9)
 
 We are still missing two critical components in our clock, while the ATmega328P can use its Internal 8MHz crystal Oscillator or an external 16MHz one they are still not very good at time keeping as this is not their intended use, also it will be unable to keep time while it is not powered. This is why we will use an RTC which is a device made for timekeeping. My choice of RTC is the DS3231 with a simple I2C connection and a cr2032 battery it can keep time with an insane 2PPM accuracy.
+
+![Image](https://github.com/user-attachments/assets/db0c53a4-4e39-4d6d-9993-70a54b9f5379)
