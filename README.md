@@ -17,6 +17,6 @@ To solve the first problem we can simply use dedicated Drivers, in fact a BCD-TO
 
 ![Image](https://github.com/user-attachments/assets/0e374f84-9c49-43f8-99c9-a4b5e42608e6)
 
-However, the problem is yet to be solved as 24 outputs are still more than what our MCU can give, we can tackle this problem using an I/O Expander with a Serial Interface. Utilizing THE I^2C Interface of the ATmega we can use I/O Expanders such as the MCP23017 that will give us 16 Exta I/O which is now more than enough of what we need. With that we can sucessfuly drive our nixie tubes using the MCU's Outputs.
+However, the problem is yet to be solved as 24 outputs are still more than what our MCU can give, we can tackle this problem using an I/O Expander with a Serial Interface. Utilizing THE I^2C Interface of the ATmega we can use I/O Expanders such as the MCP23017 that will give us 16 extra I/O which are now more than enough of what we need. With that we can sucessfuly drive our nixie tubes using the MCU's Outputs.
 
 ![Image](https://github.com/user-attachments/assets/dae679db-f14d-4664-b422-6676676a34d9)
