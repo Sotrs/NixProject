@@ -36,6 +36,8 @@ Now, we have all of our components:
 4. I/O Expander
 5. DC-DC Converter
 6. SN74141 Drivers
-We are ready to start the Electronic architecture, I will be using KiCad to create the schematics and PCB design, an open source and intuitive Electronic design software. 
 
+We are ready to start the Electronic architecture, I will be using KiCad to create the schematics and PCB design, an open source and intuitive Electronic design software. Two push buttons will be used to control and set the time by the user. Also in order to program the arduino using the type C interface we will need an external USB to Serial device or in this case we will integrade an FTDI chip directily into our board using the very popular FT232RL.  
+
+![Image](https://github.com/user-attachments/assets/8b73c5d8-c151-4075-b082-9447782246fc)
 
