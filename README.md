@@ -29,4 +29,13 @@ Last but definetely not least we will need a DC-DC boost converter, the clock wi
 
 ![Image](https://github.com/user-attachments/assets/10daaea3-362f-419d-b5e2-67e0215e916c)
 
+Now, we have all of our components:
+1. MCU
+2. Tubes
+3. RTC
+4. I/O Expander
+5. DC-DC Converter
+6. SN74141 Drivers
+We are ready to start the Electronic architecture, I will be using KiCad to create the schematics and PCB design, an open source and intuitive Electronic design software. 
+
 
